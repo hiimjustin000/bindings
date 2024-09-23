@@ -185,5 +185,4 @@ jobs:
       uses: geode-sdk/build-geode-mod@main
       with:
         path: NodeIDs
-        combine: true
         target: ${{ matrix.config.target }}
