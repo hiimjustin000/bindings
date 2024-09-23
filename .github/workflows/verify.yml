@@ -182,7 +182,7 @@ jobs:
 
     - name: Build Node IDs
       if: ${{ matrix.config.target != '' }}
-      uses: hiimjustin000/build-geode-mod@patch-1
+      uses: geode-sdk/build-geode-mod@main
       with:
         path: NodeIDs
         bindings: ${{ github.repository }}
