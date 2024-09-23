@@ -185,4 +185,6 @@ jobs:
       uses: geode-sdk/build-geode-mod@main
       with:
         path: NodeIDs
+        bindings: ${{ github.repository }}
+        bindings-ref: ${{ github.ref }}
         target: ${{ matrix.config.target }}
