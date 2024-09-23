@@ -187,4 +187,5 @@ jobs:
         path: NodeIDs
         bindings: ${{ github.repository }}
         bindings-ref: ${{ github.ref }}
+        combine: false
         target: ${{ matrix.config.target }}
