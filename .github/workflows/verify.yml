@@ -169,6 +169,10 @@ jobs:
     - name: Show Errors
       run: python test/members/check.py build
 
+    - name: Unset GEODE_SDK
+      shell: bash
+      run: echo "GEODE_SDK=" >> $GITHUB_ENV
+
     - name: Checkout Texture Loader
       if: ${{ matrix.config.target != '' }}
       uses: actions/checkout@v4
