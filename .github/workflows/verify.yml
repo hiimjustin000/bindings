@@ -173,18 +173,18 @@ jobs:
       shell: bash
       run: echo "GEODE_SDK=" >> $GITHUB_ENV
 
-    - name: Checkout Node IDs
+    - name: Checkout Texture Loader
       if: ${{ matrix.config.target != '' }}
       uses: actions/checkout@v4
       with:
-        repository: geode-sdk/NodeIDs
-        path: NodeIDs
+        repository: geode-sdk/textureldr
+        path: textureldr
 
-    - name: Build Node IDs
+    - name: Build Texture Loader
       if: ${{ matrix.config.target != '' }}
       uses: geode-sdk/build-geode-mod@main
       with:
-        path: NodeIDs
+        path: textureldr
         bindings: ${{ github.repository }}
         bindings-ref: ${{ github.ref }}
         target: ${{ matrix.config.target }}
