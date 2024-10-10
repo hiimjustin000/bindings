@@ -1962,7 +1962,7 @@ class cocos2d::CCDictionary {
 	//void setObjectUnSafe(cocos2d::CCObject*, int);
 
 	// CCDictionary(cocos2d::CCDictionary const&);
-	// CCDictionary() = ios 0x42b75c;
+	CCDictionary() = m1 0x29eda8, imac 0x30ce50, ios 0x42b75c;
 	cocos2d::CCArray* allKeys() = m1 0x29efec, imac 0x30d0b0, ios 0x42b91c;
 	cocos2d::CCArray* allKeysForObject(cocos2d::CCObject*);
 	char const* charForKey(gd::string const&);
