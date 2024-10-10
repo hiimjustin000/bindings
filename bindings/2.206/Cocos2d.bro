@@ -1979,8 +1979,8 @@ class cocos2d::CCDictionary {
 	cocos2d::CCString const* valueForKey(intptr_t) = imac 0x30d8e0, m1 0x29f850;
 	bool writeToFile(char const*);
 
-	virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*);
-	virtual void acceptVisitor(cocos2d::CCDataVisitor&);
+	virtual cocos2d::CCObject* copyWithZone(cocos2d::CCZone*) = m1 0x2a0cdc, imac 0x30ef70, ios 0x42d1f8;
+	virtual void acceptVisitor(cocos2d::CCDataVisitor&) = m1 0x2a1120, imac 0x30f3c0, ios 0x42d41c;
 }
 
 [[link(win, android)]]
