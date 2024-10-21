@@ -10645,6 +10645,10 @@ class GJSmartPrefab : cocos2d::CCObject {
 
 	virtual void encodeWithCoder(DS_Dictionary*) = win 0x2a3380, m1 0x3a4d64, imac 0x432260, ios 0x8640;
 	virtual bool canEncode() = m1 0x3a4c04, imac 0x432110, ios 0x858c;
+
+	gd::string m_prefabID;
+	gd::string m_prefabData;
+	int m_M_ID;
 }
 
 [[link(android)]]
@@ -10696,6 +10700,23 @@ class GJSmartTemplate : cocos2d::CCObject {
 
 	virtual void encodeWithCoder(DS_Dictionary*) = win 0x2a3220, m1 0x3a49f8, imac 0x431f60, ios 0x846c;
 	virtual bool canEncode() = m1 0x3a4604, imac 0x431b50, ios 0x81fc;
+
+	cocos2d::CCDictionary* m_smartPrefabs;
+	cocos2d::CCDictionary* m_idDict1;
+	cocos2d::CCDictionary* m_idDict2;
+	cocos2d::CCDictionary* m_unk050;
+	cocos2d::CCDictionary* m_unk058;
+	cocos2d::CCDictionary* m_unk060;
+	cocos2d::CCDictionary* m_unk068;
+	gd::map<gd::string, SmartPrefabResult> m_prefabResults;
+	bool m_unk080;
+	bool m_unk081;
+	bool m_unk082;
+	bool m_unk083;
+	gd::string m_name;
+	gd::string m_unk0a8;
+	int m_unk0c8;
+	int m_unk0cc;
 }
 
 [[link(android)]]
