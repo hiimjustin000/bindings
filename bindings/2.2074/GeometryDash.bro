@@ -15973,19 +15973,29 @@ class SecretGame01Layer : cocos2d::CCLayer {
     virtual void update(float) = m1 0x3dcfe8, imac 0x46dc90;
     virtual bool init() = m1 0x3dc234, imac 0x46ce50;
 
-    TodoReturn didSelectCorrectObject(CCMenuItemSpriteExtra*) = m1 0x3dce10, imac 0x46dad0;
-    TodoReturn gameStep01() = m1 0x3dc610, imac 0x46d200;
-    TodoReturn gameStep02() = m1 0x3dc890, imac 0x46d4d0;
-    TodoReturn getCountForDifficulty(int) = m1 0x3dc418, imac 0x46d040;
+    void didSelectCorrectObject(CCMenuItemSpriteExtra*) = m1 0x3dce10, imac 0x46dad0;
+    void gameStep01() = m1 0x3dc610, imac 0x46d200;
+    void gameStep02() = m1 0x3dc890, imac 0x46d4d0;
+    int getCountForDifficulty(int) = m1 0x3dc418, imac 0x46d040;
     gd::string getFrameForDifficulty(int) = m1 0x3dc440, imac 0x46d070;
-    TodoReturn getRowsForDifficulty(int) = m1 0x3dc3f4, imac 0x46d010;
-    TodoReturn getTimeForDifficulty(int);
+    int getRowsForDifficulty(int) = m1 0x3dc3f4, imac 0x46d010;
+    int getTimeForDifficulty(int) = m1 0x3dc504, imac 0x46d100;
     void onSelectButton(cocos2d::CCObject* sender) = m1 0x3dc528, imac 0x46d130;
-    TodoReturn resetGame() = m1 0x3db904, imac 0x46c350;
-    TodoReturn resetGameTimer() = m1 0x3dc9d8, imac 0x46d630;
-    TodoReturn scaleOutGame(bool) = m1 0x3dca50, imac 0x46d6c0;
-    TodoReturn showGameOver() = m1 0x3dca44, imac 0x46d6a0;
-    TodoReturn showGameWon() = m1 0x3dcdfc, imac 0x46dab0;
+    void resetGame() = m1 0x3db904, imac 0x46c350;
+    void resetGameTimer() = m1 0x3dc9d8, imac 0x46d630;
+    void scaleOutGame(bool) = m1 0x3dca50, imac 0x46d6c0;
+    void showGameOver() = m1 0x3dca44, imac 0x46d6a0;
+    void showGameWon() = m1 0x3dcdfc, imac 0x46dab0;
+
+    cocos2d::CCArray* m_gameObjects;
+    cocos2d::CCArray* m_requiredObjects;
+    cocos2d::CCMenu* m_mainMenu;
+    int m_selectedObject;
+    int m_gameDifficulty;
+    bool m_gameActive;
+    float m_timeElapsed;
+    float m_gameTime;
+    cocos2d::CCSprite* m_timeBarSprite;
 }
 
 [[link(android)]]
