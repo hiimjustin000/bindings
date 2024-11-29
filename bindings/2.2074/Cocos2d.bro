@@ -1525,7 +1525,7 @@ class cocos2d::CCIMEDispatcher {
     bool attachDelegateWithIME(cocos2d::CCIMEDelegate*);
     bool detachDelegateWithIME(cocos2d::CCIMEDelegate*);
     void dispatchDeleteBackward() = m1 0x4124e0, imac 0x4a9140;
-    void dispatchDeleteForward();
+    void dispatchDeleteForward() = m1 0x412500, imac 0x4a9160;
     void dispatchInsertText(char const*, int, cocos2d::enumKeyCodes) = imac 0x4a9110, m1 0x4124b4;
     void dispatchKeyboardDidHide(cocos2d::CCIMEKeyboardNotificationInfo&);
     void dispatchKeyboardDidShow(cocos2d::CCIMEKeyboardNotificationInfo&);
@@ -3156,8 +3156,8 @@ class cocos2d {
     static cocos2d::CCBMFontConfiguration* FNTConfigLoadFile(char const*) = m1 0x4f1f3c, imac 0x5bc460;
     static void FNTConfigRemoveCache();
     static cocos2d::CCAffineTransform __CCAffineTransformMake(float, float, float, float, float, float);
-    static cocos2d::CCPoint __CCPointApplyAffineTransform(cocos2d::CCPoint const&, cocos2d::CCAffineTransform const&);
-    static cocos2d::CCSize __CCSizeApplyAffineTransform(cocos2d::CCSize const&, cocos2d::CCAffineTransform const&);
+    static cocos2d::CCPoint __CCPointApplyAffineTransform(cocos2d::CCPoint const&, cocos2d::CCAffineTransform const&) = m1 0x1df1e8, imac 0x22e4c0;
+    static cocos2d::CCSize __CCSizeApplyAffineTransform(cocos2d::CCSize const&, cocos2d::CCAffineTransform const&) = m1 0x1df244, imac 0x22e530;
     static cocos2d::CCPoint ccCardinalSplineAt(cocos2d::CCPoint&, cocos2d::CCPoint&, cocos2d::CCPoint&, cocos2d::CCPoint&, float, float);
     static void ccDrawCardinalSpline(cocos2d::CCPointArray*, float, unsigned int);
     static void ccDrawCatmullRom(cocos2d::CCPointArray*, unsigned int);
