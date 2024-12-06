@@ -4015,7 +4015,7 @@ class EditorUI : cocos2d::CCLayer, FLAlertLayerProtocol, ColorSelectDelegate, GJ
 
     void activateRotationControl(cocos2d::CCObject*) = win 0x121420;
     void activateScaleControl(cocos2d::CCObject*) = win 0x113280;
-    void activateTransformControl(cocos2d::CCObject*) = win 0x1138d0;
+    void activateTransformControl(cocos2d::CCObject*) = win 0x1138d0, m1 0x3aec4, imac 0x40720;
     TodoReturn addObjectsToSmartTemplate(GJSmartTemplate*, cocos2d::CCArray*);
     TodoReturn addSnapPosition(cocos2d::CCPoint);
     TodoReturn alignObjects(cocos2d::CCArray*, bool);
