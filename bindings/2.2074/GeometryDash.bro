@@ -11160,7 +11160,7 @@ class GJTransformControl : cocos2d::CCLayer {
     TodoReturn loadValues(GameObject*, cocos2d::CCArray*, gd::unordered_map<int, GameObjectEditorState>&);
     TodoReturn logCurrentZeroPos();
     void onToggleLockScale(cocos2d::CCObject* sender);
-    void refreshControl() = win 0x1295f0;
+    void refreshControl() = win 0x1295f0, m1 0x43948, imac 0x4ab90;
     void saveToState(GJTransformState&);
     void scaleButtons(float) = win 0x129810;
     cocos2d::CCSprite* spriteByTag(int tag) {
