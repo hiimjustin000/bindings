@@ -36,6 +36,7 @@ enum class SearchType {
     LevelListsOnClick = 25,
     Type26 = 26,
     Sent = 27,
+    FeaturedLite = 28,
     MyLevels = 98,
     SavedLevels = 99,
     FavouriteLevels = 100,
@@ -296,7 +297,9 @@ enum class GauntletType {
     Discord = 0x31,
     Split = 0x32,
     NCS = 0x33,
-    NCS2 = 0x34
+    NCS2 = 0x34,
+    Space = 0x35,
+    Cosmos = 0x36
 };
 enum class GJMPErrorCode {};
 enum class GJTimedLevelType {
@@ -360,7 +363,14 @@ enum class GJSmartDirection {};
 enum class SmartBlockType {};
 enum class TouchTriggerControl {};
 enum class SmartPrefabResult {};
-enum class AudioSortType {};
+enum class AudioSortType {
+    NameAscending = 0,
+    NameDescending = 1,
+    LengthAscending = 2,
+    LengthDescending = 3,
+    IDAscending = 4,
+    IDDescending = 5
+};
 enum class spriteMode {};
 enum class GJAssetType {
     Song = 1,
@@ -623,7 +633,8 @@ enum class SpecialRewardItem {
     BloodShard = 0xB,
     MetalShard = 0xC,
     LightShard = 0xD,
-    SoulShard = 0xE
+    SoulShard = 0xE,
+    GoldKey = 0xF
 };
 
 enum class EditCommand {
@@ -741,7 +752,8 @@ enum class GJRewardType
     Key10Treasure = 0x5,
     Key25Treasure = 0x6,
     Key50Treasure = 0x7,
-    Key100Treasure = 0x8
+    Key100Treasure = 0x8,
+    Gold = 0x9
 };
 
 enum class IconType {
@@ -835,12 +847,15 @@ enum class GJHttpType {
     GetTopArtists = 0x35,
     GetAccountBackupURL = 0x36,
     GetAccountSyncURL = 0x37,
-
-    // Yet to be added by Robtop in 2.21
-    // joinLobby = 0x39,
-    // ExitMPLobby = 0x3a,
-
-    DeleteServerLevelList = 0x3e,
+    //0x38 is unused? 
+    JoinLobby = 0x39,
+    ExitLobby = 0x3A,
+    GetCustomContentURL = 0x3B,
+    GetLevelLists = 0x3C,
+    UploadLevelList = 0x3D,
+    DeleteServerLevelList = 0x3E,
+    GetNews = 0x3F,
+    GetGJSecretReward = 0x40
 };
 
 enum class DialogChatPlacement {
@@ -911,6 +926,8 @@ enum class ShipStreak {
     ShipFire5 = 5,
     ShipFire6 = 6,
 };
+
+enum class TextFadeInStyle {};
 
 // Geode Addition
 enum class GameOptionsSetting {
