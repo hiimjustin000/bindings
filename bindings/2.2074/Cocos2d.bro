@@ -2063,7 +2063,8 @@ class cocos2d::CCArray : cocos2d::CCObject {
     // void addObjectsFromArray(cocos2d::CCArray*);
     unsigned int capacity() const;
     // bool containsObject(cocos2d::CCObject*) const;
-    // unsigned int count() const;
+    [[nodefine(mac, ios)]]
+    unsigned int count() const = m1 0x629370, imac 0x709cf0;
     void exchangeObject(cocos2d::CCObject*, cocos2d::CCObject*);
     void exchangeObjectAtIndex(unsigned int, unsigned int);
     // void fastRemoveObject(cocos2d::CCObject*);
@@ -2074,7 +2075,8 @@ class cocos2d::CCArray : cocos2d::CCObject {
     void insertObject(cocos2d::CCObject*, unsigned int);
     bool isEqualToArray(cocos2d::CCArray*);
     // cocos2d::CCObject* lastObject();
-    // cocos2d::CCObject* objectAtIndex(unsigned int) = m1 0x6293a0, imac 0x709d40;
+    [[nodefine(mac, ios)]]
+    cocos2d::CCObject* objectAtIndex(unsigned int) = m1 0x6293a0, imac 0x709d40;
     cocos2d::CCObject* randomObject();
     void recreateNewIndexes();
     void reduceMemoryFootprint();

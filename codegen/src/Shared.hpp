@@ -71,6 +71,7 @@ enum class BindStatus {
     NeedsBinding,
     Unbindable,
     Missing,
+    NoDefine,
 };
 
 struct codegen_error : std::runtime_error {
@@ -147,6 +148,7 @@ namespace codegen {
 
         if ((fn.prototype.attributes.missing & p) != Platform::None) return BindStatus::Missing;
         if ((fn.prototype.attributes.links & p) != Platform::None) return BindStatus::Binded;
+        if ((fn.prototype.attributes.nodefine & p) != Platform::None) return BindStatus::NoDefine;
 
         if (platformNumberWithPlatform(p, fn.binds) != -1) return BindStatus::NeedsBinding;
 
@@ -158,6 +160,7 @@ namespace codegen {
 
         if ((f.prototype.attributes.missing & p) != Platform::None) return BindStatus::Missing;
         if ((f.prototype.attributes.links & p) != Platform::None) return BindStatus::Binded;
+        if ((f.prototype.attributes.nodefine & p) != Platform::None) return BindStatus::NoDefine;
 
         if (platformNumberWithPlatform(p, f.binds) != -1) return BindStatus::NeedsBinding;
 

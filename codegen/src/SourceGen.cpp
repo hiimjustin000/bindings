@@ -165,7 +165,7 @@ std::string generateBindingSource(Root const& root) {
 	std::string output(format_strings::source_start);
 
 	for (auto& f : root.functions) {
-        if (codegen::getStatus(f) != BindStatus::NeedsBinding) {
+        if (codegen::getStatus(f) != BindStatus::NeedsBinding || codegen::getStatus(f) == BindStatus::NoDefine) {
             continue;
         }
 
@@ -213,7 +213,7 @@ std::string generateBindingSource(Root const& root) {
 							);
 							break;
 					}
-				} else {
+				} else if (codegen::getStatus(*fn) != BindStatus::NoDefine) {
 					char const* used_declare_format = nullptr;
 
 					if (
